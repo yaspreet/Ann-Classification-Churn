@@ -8,7 +8,7 @@ import pickle
 model = tf.keras.models.load_model('churn_model.h5')
 
 
-with open('labelEncoder.pkl','rb') as f :
+with open('LabelEncoder.pkl','rb') as f :
     le = pickle.load(f)
 
 with open('OneHotEncoder.pkl','rb') as f:
@@ -60,6 +60,7 @@ if prediction_probab >0.5:
 else:
     st.write(f'The customer is not likely to churn with a probability of {prediction_probab}')
     
+
 
 
 
